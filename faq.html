@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    :root {
+        --bg-dark: #0D1B2A;
+        --bg-light: #F9F9F9;
+        --text-dark: #FFFFFF;
+        --text-light: #111111;
+        --card-dark: #1B263B;
+        --card-light: #E0E0E0;
+        --accent-color: #415A77;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: 'Helvetica', Arial, sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+        line-height: 1.6;
+        padding: 20px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+        background-color: var(--bg-light);
+        color: var(--text-light);
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+
+    .faq-item {
+        background-color: var(--card-dark);
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .faq-item:hover { background-color: var(--accent-color); }
+
+    body.light-mode .faq-item {
+        background-color: var(--card-light);
+        color: var(--text-light);
+    }
+
+    .faq-question { font-weight: bold; font-size: 1.1rem; }
+    .faq-answer {
+        display: none;
+        margin-top: 10px;
+        padding-left: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">Q1: How do I create an account?</div>
+        <div class="faq-answer">A: Click Sign Up on the app and fill in your personal details. Verify your email to activate your account.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">Q2: How can I track my order?</div>
+        <div class="faq-answer">A: After placing an order, go to My Orders to see the order status and tracking details.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">Q3: What payment methods are accepted?</div>
+        <div class="faq-answer">A: We accept credit/debit cards, PayPal, and selected regional payment methods.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">Q4: Can I cancel my order?</div>
+        <div class="faq-answer">A: Orders can be canceled before they are shipped. Go to your orders page and select Cancel if available.</div>
+    </div>
+</div>
+
+<script>
+    function toggleAnswer(faqItem) {
+        const answer = faqItem.querySelector('.faq-answer');
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function setTheme(theme) {
+        if(theme === 'light') {
+            document.body.classList.add('light-mode');
+        } else {
+            document.body.classList.remove('light-mode');
+        }
+    }
+</script>
+</body>
+</html>

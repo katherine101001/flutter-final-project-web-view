@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Terms & Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* Colors */
+    :root {
+        --bg-dark: #0D1B2A;
+        --bg-light: #F9F9F9;
+        --text-dark: #FFFFFF;
+        --text-light: #111111;
+        --accent-dark: #1B263B;
+        --accent-light: #E0E0E0;
+    }
+
+    /* Reset & base */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Helvetica', Arial, sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+        line-height: 1.6;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 20px;
+    }
+
+    body.light-mode {
+        background-color: var(--bg-light);
+        color: var(--text-light);
+    }
+
+    /* Container */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        color: inherit;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    /* Section styling */
+    section {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: var(--accent-dark);
+        transition: background-color 0.3s;
+    }
+
+    body.light-mode section {
+        background-color: var(--accent-light);
+    }
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Terms & Services</h1>
+
+    <section>
+        <h2>1. Account</h2>
+        <p>To use our services, you must register an account. Keep your login credentials secure and do not share them with anyone.</p>
+    </section>
+
+    <section>
+        <h2>2. Purchases and Payments</h2>
+        <p>All orders are subject to product availability. Payments are securely processed via our payment partners. You agree to pay all charges for your purchases in accordance with the terms presented at checkout.</p>
+    </section>
+
+    <section>
+        <h2>3. Shipping and Delivery</h2>
+        <p>Delivery times may vary based on location and shipping method. We are not responsible for delays caused by carriers. You will receive tracking information after your order is shipped.</p>
+    </section>
+
+    <section>
+        <h2>4. Returns and Refunds</h2>
+        <p>Returns are accepted in accordance with our Return Policy. Refunds are processed after we receive the returned items and verify their condition.</p>
+    </section>
+
+    <section>
+        <h2>5. Limitation of Liability</h2>
+        <p>Our company is not liable for any indirect, incidental, or consequential damages arising from the use of our services. Use the app responsibly and at your own risk.</p>
+    </section>
+</div>
+
+<script>
+    function setTheme(theme) {
+        if(theme === 'light') {
+            document.body.classList.add('light-mode');
+        } else {
+            document.body.classList.remove('light-mode');
+        }
+    }
+</script>
+</body>
+</html>
