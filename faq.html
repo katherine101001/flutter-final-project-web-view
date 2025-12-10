@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQ</title>
+<style>
+    :root {
+        --bg-dark: #0D1B2A;
+        --bg-light: #F4F4F4;
+        --text-dark: #FFFFFF;
+        --text-light: #111111;
+        --secondary-dark: #1B263B;
+        --secondary-light: #E0E0E0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+        max-width: 900px;
+        margin: 20px auto;
+        line-height: 1.6;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .faq-item {
+        background-color: var(--secondary-dark);
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .faq-item:hover {
+        background-color: #415A77;
+    }
+
+    .faq-question { font-weight: bold; }
+    .faq-answer { display: none; margin-top: 10px; }
+
+    body.light-mode {
+        background-color: var(--bg-light);
+        color: var(--text-light);
+    }
+    body.light-mode .faq-item {
+        background-color: var(--secondary-light);
+        color: var(--text-light);
+    }
+</style>
+</head>
+<body>
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">Q1: How do I create an account?</div>
+        <div class="faq-answer">A: Click Sign Up and fill your details.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">Q2: How can I track my order?</div>
+        <div class="faq-answer">A: Go to My Orders in your profile to see tracking info.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <div class="faq-question">Q3: What payment methods are accepted?</div>
+        <div class="faq-answer">A: Credit/debit cards, PayPal, and regional payment options.</div>
+    </div>
+
+<script>
+    function toggleAnswer(faqItem) {
+        const answer = faqItem.querySelector('.faq-answer');
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function setTheme(theme) {
+        if(theme === 'light') {
+            document.body.classList.add('light-mode');
+        } else {
+            document.body.classList.remove('light-mode');
+        }
+    }
+</script>
+</body>
+</html>
