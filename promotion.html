@@ -6,122 +6,80 @@
 <title>Weekly Promotion Premium</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --primary-color: #007bff;
-    --accent-color: #00c6ff;
-    --bg-light: #f8f8f8;
-    --bg-dark: #121212;
-    --text-light: #ffffff;
-    --text-dark: #333333;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body { background: var(--bg-dark); color: var(--text-light); }
-    .hero { background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x400?text=Promotion') center/cover no-repeat; }
-    h1,h2,h3,p { color: var(--text-light); }
-    .highlight { color: var(--primary-color); }
-    hr { border-color: #333; }
-  }
-
-  @media (prefers-color-scheme: light) {
-    body { background: var(--bg-light); color: var(--text-dark); }
-    .hero { background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1200x400?text=Promotion') center/cover no-repeat; }
-    h1,h2,h3,p { color: var(--text-dark); }
-    .highlight { color: var(--primary-color); }
-    hr { border-color: #ccc; }
-  }
-
-  body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.6; }
-
-  .hero {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 1rem;
-  }
-
-  .hero h1 { font-size: 2.5rem; font-weight: 700; margin: 0.5rem 0; }
-  .hero p { font-size: 1.2rem; max-width: 600px; }
-
-  main {
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem 1rem;
-  }
-
-  h2 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; }
-  h3 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 500; }
-  p { margin-bottom: 1rem; font-size: 1rem; }
-
-  .highlight { font-weight: 700; color: white;}
-
-  hr { border: none; border-top: 1px solid #ccc; margin: 2rem 0; }
-
-  .section-bg {
-    background: linear-gradient(90deg, #007bff, #00c6ff);
-    border-radius: 12px;
-    padding: 1rem;
-    color: white;
-    margin: 2rem 0;
-  }
-
-  @media (max-width: 600px) {
-    .hero h1 { font-size: 2rem; }
-    .hero p { font-size: 1rem; }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.2rem; }
-    p { font-size: 0.95rem; }
-  }
-
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 0.9rem;
-    color: gray;
-  }
+:root {
+  --primary-color: #007bff;
+  --accent-color: #00c6ff;
+  --bg-light: #f8f8f8;
+  --bg-dark: #121212;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+}
+body{margin:0;font-family:'Montserrat',sans-serif;line-height:1.6;}
+@media(prefers-color-scheme:dark){body{background:var(--bg-dark);color:var(--text-light);}h1,h2,h3,p,li{color:var(--text-light);}.highlight{color:var(--primary-color);}hr{border-color:#333;}.section-bg{color:white;}}
+@media(prefers-color-scheme:light){body{background:var(--bg-light);color:var(--text-dark);}h1,h2,h3,p,li{color:var(--text-dark);}.highlight{color:white;}hr{border-color:#ccc;}}
+.hero{height:300px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:1rem;background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1200x400?text=Weekly+Promo') center/cover no-repeat;color:white;}
+.hero h1{font-size:2.5rem;font-weight:700;margin:0.5rem 0;}
+.hero p{font-size:1.2rem;max-width:600px;}
+main{max-width:800px;margin:auto;padding:2rem 1rem;}
+h2{font-size:1.8rem;margin-top:2rem;margin-bottom:1rem;font-weight:600;opacity:0;transform:translateY(20px);animation:fadeInUp 0.8s forwards;}
+h3{font-size:1.4rem;margin-top:1.5rem;margin-bottom:0.5rem;font-weight:500;opacity:0;transform:translateY(20px);animation:fadeInUp 0.8s forwards;animation-delay:0.2s;}
+p,li{margin-bottom:1rem;font-size:1rem;opacity:0;transform:translateY(20px);animation:fadeInUp 0.8s forwards;animation-delay:0.4s;}
+.highlight{font-weight:700;color:white;}
+hr{border:none;border-top:1px solid #ccc;margin:2rem 0;opacity:0;transform:translateY(20px);animation:fadeInUp 0.8s forwards;animation-delay:0.6s;}
+.section-bg{background: linear-gradient(90deg,#007bff,#00c6ff); border-radius:12px;padding:1rem;margin:2rem 0;color:white;opacity:0;transform:translateY(20px);animation:fadeInUp 0.8s forwards;animation-delay:0.8s;}
+@keyframes fadeInUp{to{opacity:1;transform:translateY(0);}}
+@media(max-width:600px){.hero h1{font-size:2rem;}.hero p{font-size:1rem;}h2{font-size:1.5rem;}h3{font-size:1.2rem;}p,li{font-size:0.95rem;}}
+footer{text-align:center;padding:2rem 1rem;font-size:0.9rem;color:gray;}
 </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Weekly Promotion</h1>
-    <p>Special offers this week! Save on selected products and enjoy exclusive deals.</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>Promotion Highlights</h2>
-      <p>Enjoy curated discounts on electronics, fashion, and lifestyle products. Find new arrivals and exclusive bundles at unbeatable prices.</p>
-    </section>
+<header class="hero">
+  <h1>Weekly Promotion</h1>
+  <p>Special offers this week! Save on selected products and enjoy exclusive deals.</p>
+</header>
 
-    <section class="section-bg">
-      <h2>Key Offers</h2>
-      <ul>
-        <li>Discounts up to <span class="highlight">30%</span></li>
-        <li>Exclusive bundles and combos</li>
-        <li>Weekly limited-time deals</li>
-        <li>New arrivals with special offers</li>
-      </ul>
-    </section>
+<main>
+<section>
+  <h2>Overview</h2>
+  <p>Every week we curate special promotions on popular products. Take advantage of limited-time discounts on fashion, electronics, and lifestyle essentials.</p>
+  <h3>Categories</h3>
+  <ul>
+    <li>Electronics: headphones, smart devices</li>
+    <li>Fashion: apparel, shoes, accessories</li>
+    <li>Home & Lifestyle: decor, gadgets, wellness</li>
+  </ul>
+</section>
 
-    <hr>
+<section class="section-bg">
+  <h2>Key Offers</h2>
+  <ul>
+    <li>Discounts up to <span class="highlight">30%</span></li>
+    <li>Exclusive bundles and deals</li>
+    <li>New arrivals with special pricing</li>
+    <li>Time-limited weekly specials</li>
+  </ul>
+</section>
 
-    <section>
-      <h2>How to Maximize Savings</h2>
-      <p>Bookmark your favorite items, check for limited-time deals, and plan purchases ahead to take advantage of weekly promotions.</p>
-    </section>
+<hr>
 
-    <section>
-      <h2>Terms & Conditions</h2>
-      <p>Offers valid for a limited period. Discounts apply to selected items only. Terms may vary by product category.</p>
-    </section>
-  </main>
+<section>
+  <h2>How to Maximize Savings</h2>
+  <p>Bookmark favorites, check weekly updates, and plan purchases to take full advantage of deals.</p>
+  <h3>Extra Tips</h3>
+  <ul>
+    <li>Sign up for newsletter notifications</li>
+    <li>Combine offers for bundles</li>
+    <li>Track time-sensitive flash deals</li>
+  </ul>
+</section>
 
-  <footer>
-    © 2025 E-Commerce Inc. All rights reserved.
-  </footer>
+<section>
+  <h2>Terms & Conditions</h2>
+  <p>Offers valid for limited time and apply to selected items. Terms may vary by product category.</p>
+</section>
+</main>
+
+<footer>© 2025 E-Commerce Inc. All rights reserved.</footer>
 </body>
 </html>
