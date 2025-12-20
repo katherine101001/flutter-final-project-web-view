@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Friday Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-color: #ff3c00;
+    --accent-color: #ff7f50;
+    --bg-light: #f8f8f8;
+    --bg-dark: #121212;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body { background: var(--bg-dark); color: var(--text-light); }
+    .hero { background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x400?text=Black+Friday') center/cover no-repeat; }
+    h1,h2,h3,p { color: var(--text-light); }
+    .highlight { color: var(--primary-color); }
+    hr { border-color: #333; }
+  }
+
+  @media (prefers-color-scheme: light) {
+    body { background: var(--bg-light); color: var(--text-dark); }
+    .hero { background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1200x400?text=Black+Friday') center/cover no-repeat; }
+    h1,h2,h3,p { color: var(--text-dark); }
+    .highlight { color: var(--primary-color); }
+    hr { border-color: #ccc; }
+  }
+
+  body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.6; }
+
+  .hero {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+  }
+
+  .hero h1 { font-size: 2.5rem; font-weight: 700; margin: 0.5rem 0; }
+  .hero p { font-size: 1.2rem; max-width: 600px; }
+
+  main {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+
+  h2 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; }
+  h3 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 500; }
+  p { margin-bottom: 1rem; font-size: 1rem; }
+
+  .highlight { font-weight: 700; color: white;}
+
+  hr { border: none; border-top: 1px solid #ccc; margin: 2rem 0; }
+
+  .section-bg {
+    background: linear-gradient(90deg, #ff3c00, #ff7f50, #ff3c00);
+    border-radius: 12px;
+    padding: 1rem;
+    color: white;
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    p { font-size: 0.95rem; }
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: gray;
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Black Friday Mega Sale</h1>
+    <p>Up to <span class="highlight">70% OFF</span> on selected items. Exclusive deals for a limited time!</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Why You Can't Miss This</h2>
+      <p>This Black Friday, enjoy unprecedented discounts across all categories. From electronics to fashion, elevate your shopping experience with unbeatable deals and premium offers.</p>
+    </section>
+
+    <section class="section-bg">
+      <h2>Highlights</h2>
+      <ul>
+        <li>Up to <span class="highlight">70%</span> off on top electronics</li>
+        <li>Special fashion bundles</li>
+        <li>Flash deals released hourly</li>
+        <li>Exclusive online-only offers</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Tips to Shop Smart</h2>
+      <p>Prepare a wishlist of your favorite items, check deal schedules, and act fast to secure limited-stock products. Use this opportunity to get the best value for your money.</p>
+    </section>
+
+    <section>
+      <h2>Terms & Conditions</h2>
+      <p>Offers valid while stocks last. Discounts apply only during the Black Friday period. Terms may vary by category.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 E-Commerce Inc. All rights reserved.
+  </footer>
+</body>
+</html>
