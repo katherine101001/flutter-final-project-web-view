@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seasonal Promotion Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-color: #28a745;
+    --accent-color: #82e0aa;
+    --bg-light: #f8f8f8;
+    --bg-dark: #121212;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+  }
+
+  body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.6; }
+
+  @media (prefers-color-scheme: dark) {
+    body { background: var(--bg-dark); color: var(--text-light); }
+    h1,h2,h3,p { color: var(--text-light); }
+    .highlight { color: var(--primary-color); }
+    hr { border-color: #333; }
+    .section-bg { color: white; }
+  }
+  @media (prefers-color-scheme: light) {
+    body { background: var(--bg-light); color: var(--text-dark); }
+    h1,h2,h3,p { color: var(--text-dark); }
+    .highlight { color: var(--primary-color); }
+    hr { border-color: #ccc; }
+  }
+
+  .hero {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1200x400?text=Seasonal+Promo') center/cover no-repeat;
+    color: white;
+  }
+  .hero h1 { font-size: 2.5rem; font-weight: 700; margin: 0.5rem 0; }
+  .hero p { font-size: 1.2rem; max-width: 600px; }
+
+  main { max-width: 800px; margin: auto; padding: 2rem 1rem; }
+
+  h2 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s forwards; }
+  p { margin-bottom: 1rem; font-size: 1rem; opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s forwards; animation-delay: 0.2s; }
+
+  .highlight { font-weight: 700; color:white;}
+
+  hr { border: none; border-top: 1px solid #ccc; margin: 2rem 0; opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s forwards; animation-delay: 0.4s; }
+
+  .section-bg {
+    background: linear-gradient(90deg, #28a745, #82e0aa);
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 2rem 0;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.6s;
+  }
+
+  @keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 0.95rem; }
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: gray;
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Seasonal Special Promotion</h1>
+    <p>Celebrate the season with exclusive offers! Save on selected products and enjoy limited-time perks.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Seasonal Highlights</h2>
+      <p>Our seasonal promotion brings you curated discounts on top categories, including electronics, home essentials, and fashion. Experience premium quality at unbeatable prices.</p>
+    </section>
+
+    <section class="section-bg">
+      <h2>Key Offers</h2>
+      <ul>
+        <li>Selected products up to <span class="highlight">50% off</span></li>
+        <li>Seasonal bundles with exclusive perks</li>
+        <li>Limited-time offers, while stocks last</li>
+        <li>New arrivals with special discounts</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Shopping Tips</h2>
+      <p>Bookmark your favorite products, watch for limited-time deals, and act quickly to grab exclusive seasonal offers before they’re gone.</p>
+    </section>
+
+    <section>
+      <h2>Terms & Conditions</h2>
+      <p>Offers valid during the promotion period only. Discounts apply to selected items. Terms may vary by category.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 E-Commerce Inc. All rights reserved.
+  </footer>
+
+</body>
+</html>
